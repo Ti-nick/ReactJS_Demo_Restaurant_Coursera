@@ -4,20 +4,78 @@ header{
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   justify-items: center;
-  background-color: bisque;
+  height: 100px;
 }
+
 header img{
   grid-column: 3/span 2;
+  min-width: 148px;
 }
 
 .nav-container{
   grid-column: 5/span 6;
+  min-width: 587px;
 }
 .nav-container a{
   margin: 0px 20px;
   color: #282c34;
   text-decoration: none;
 }
+
+
+/* Banner Section */
+.BannerSectionWrapper{
+  display: flex;
+  background: linear-gradient(to bottom, #495E57 85%, rgba(255, 255, 255, 0) 80%);
+  justify-content: center;
+}
+.BannerSectionWrapper-Left{
+  margin-top: 20px;
+}
+.BannerSectionWrapper-Left h1{
+  color: #F4CE14;
+}
+.BannerSectionWrapper-Left h4{
+  color: #EDEFEE;
+}
+.BannerSectionWrapper-Left p{
+  display: inline-block;
+  width: 300px;
+  line-height: 1.6;
+  color: #EDEFEE;
+}
+.BannerSectionWrapper button{
+  background-color: #F4CE14;
+  height: 40px;
+  width: 170px;
+  border: 0;
+  border-radius: 10px;
+}
+.BannerSectionWrapper-Right img{
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 70px;
+  margin-left: 8vw;
+}
+
+
+/* Backstory Section */
+.BackstoryWrapper{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  justify-items: center;
+  height: 100px;
+}
+.Backstory-Left{
+  grid-column: 3/span 2;
+}
+.Backstory-Left p{
+
+}
+.Backstory-Right{
+  grid-column: 5/span 6;
+}
+
 
 /* Footer CSS */
 footer{
@@ -27,10 +85,12 @@ footer{
 }
 footer img{
   grid-column: 3/span 2;
+  min-width: 148px;
 }
 .footer-section-wrapper{
   grid-column: 5/span 6;
   display: flex;
+  min-width: 587px;
 }
 footer section{
   margin-left: 60px;

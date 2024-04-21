@@ -1,5 +1,11 @@
+import Backstory from "./Backstory"
+import BannerSection from "./BannerSection"
+
 export default function Main() {
     return(
-        <main></main>
+        <main>
+            <BannerSection/>
+            <Backstory/>
+        </main>
     )
 }
