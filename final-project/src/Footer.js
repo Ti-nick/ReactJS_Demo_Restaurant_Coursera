@@ -4,35 +4,39 @@ export default function Footer() {
     return(
         <footer>
             <img src={Logo}/>
+            <div className="footer-section-wrapper">
+
             <section>
                 <label>Doormat</label>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Menu</a></li>
-                    <li><a>Reservation</a></li>
-                    <li><a>Order-Online</a></li>
-                    <li><a>Login</a></li>
+                <ul className="footer-ul">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reservation</a></li>
+                    <li><a href="#">Order-Online</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
             </section>
 
             <section>
                 <label>Contact</label>
-                <ul>
-                    <li><a>Address</a></li>
-                    <li><a>Phone</a></li>
-                    <li><a>Email</a></li>
+                <ul className="footer-ul">
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Email</a></li>
                 </ul>
             </section>
 
             <section>
                 <label>Social Media</label>
-                <ul>
-                    <li><a>Instagram</a></li>
-                    <li><a>Facebook</a></li>
-                    <li><a>Twritter</a></li>
+                <ul className="footer-ul">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twritter</a></li>
                 </ul>
             </section>
+
+            </div>
         </footer>
     )
 }
