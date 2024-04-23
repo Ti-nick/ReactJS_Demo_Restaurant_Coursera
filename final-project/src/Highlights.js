@@ -1,11 +1,12 @@
 import RestaurantFood_Square from "/Users/ty/Documents/GitHub/Restaurant-Demo-Coursera/final-project/src/assets/restauranfood_square.jpg"
+import { Link } from "react-router-dom"
 
 export default function HighlightsSection(){
     return (
         <>
             <div className="HighlightsWrapper">
                 <h1>This Weeks Specials!</h1>
-                <button type="button">Online Menu</button>
+                <Link to="/online-menu"><button type="button">Online Menu</button></Link>
             </div>
             <div className="HighlightsCardSection">
                 <section className="Card">

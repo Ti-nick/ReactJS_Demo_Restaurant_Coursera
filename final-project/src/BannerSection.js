@@ -11,7 +11,7 @@ export default function BannerSection(){
                         <h4>Chicago</h4>
                         <p>Nestled within the bustling streets of Chicago, "Little Lemon" emerges as a vibrant.</p>
                         <br/>
-                        <button type="button"><Link to="/booking" className="button-text">Reserve a table</Link></button>
+                        <Link to="/booking"><button type="button">Reserve a table</button></Link>
                     </div>
                     <div className="BannerSectionWrapper-Right">
                         <img src={RestaurantFood_Square} alt="food" width="320px"/>
