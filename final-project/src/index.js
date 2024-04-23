@@ -2,12 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import BookingPage from './BookingPage.js'
+import OnlineMenu from './OnlineMenu.js'
 import reportWebVitals from './reportWebVitals';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import WrongURL from './WrongURL.js';
+
+const router = createBrowserRouter([{
+  path: '/',
+  element: <App/>,
+  errorElement: <WrongURL/>,
+},
+{
+ path: '/booking',
+ element: <BookingPage/>
+},
+{
+  path: '/online-menu',
+  element: <OnlineMenu/>,
+},
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

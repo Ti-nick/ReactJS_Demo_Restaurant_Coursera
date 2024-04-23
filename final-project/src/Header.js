@@ -1,16 +1,17 @@
 import Logo from "/Users/ty/Documents/GitHub/Restaurant-Demo-Coursera/final-project/src/assets/Logo.svg"
+import { Link } from "react-router-dom"
 
 export default function Header() {
     return(
         <header className="header">
             <img src={Logo}/>
             <nav className="nav-container">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Menu</a>
-                    <a href="#">Reservation</a>
-                    <a href="#">Order-Online</a>
-                    <a href="#">Login</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/">About</Link>
+                    <Link to="/online-menu">Menu</Link>
+                    <Link to="/booking">Reservation</Link>
+                    <Link to="/">Order-Online</Link>
+                    <Link to="/">Login</Link>
             </nav>
         </header>
     )

@@ -5,7 +5,7 @@ export default function HighlightsSection(){
         <>
             <div className="HighlightsWrapper">
                 <h1>This Weeks Specials!</h1>
-                <button type="button">Reserve a table</button>
+                <button type="button">Online Menu</button>
             </div>
             <div className="HighlightsCardSection">
                 <section className="Card">

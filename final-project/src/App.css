@@ -59,6 +59,10 @@ button{
   border: 0;
   border-radius: 10px;
 }
+.button-text{
+  color: black;
+  text-decoration: none;
+}
 .BannerSectionWrapper-Right{
   flex: 1;
   margin-top: 70px;
