@@ -4,6 +4,7 @@ import HighlightsSection from "./Highlights"
 import RatingSection from "./Rating"
 
 export default function Main() {
+
     return(
         <main>
             <BannerSection/>
