@@ -48,7 +48,7 @@ export default function BookingForm(){
                 <input value={numberGuest} onChange={(e)=> setNumberGuest(e.target.value)} type="number" placeholder="2" min="1" max="10" id="guests" required/>
                 <label for="occasion">Occasion</label>
                 <select value={occasion} onChange={(e)=> setOccasion(e.target.value)} id="occasion" required>
-                    <option value="Birthday">Ondinary Dinner</option>
+                    <option value="Ondinary Dinner">Ondinary Dinner</option>
                     <option value="Birthday">Birthday</option>
                     <option value="Anniversary">Anniversary</option>
                 </select>
