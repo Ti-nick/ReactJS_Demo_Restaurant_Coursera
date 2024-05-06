@@ -1,12 +1,15 @@
-import { useState } from "react"
+import { useState } from "react";
 import { useReducer } from 'react';
+import { useEffect } from 'react';
+import { fetchAPI } from "./mockAPI";
+import { submitAPI } from "./mockAPI";
 
 export function initializeTimes() {
     return ["17:00","18:00","19:00","20:00","21:00","22:00"];
 }
 
 export function updateTimes(state, action){
-  if (action.type === "selected_date") return ["17:00","18:00","20:00","21:00","22:00"]
+  if (action.toSelectADate === "selected_date") return action.avaliableTime
   return state;
 }
 
@@ -17,10 +20,15 @@ export default function BookingForm(){
     const [numberGuest, setNumberGuest] = useState("")
     const [occasion, setOccasion] = useState("")
 
+    useEffect(()=>{
+       if(date){fetchAPI(date).then(result => {
+            dispatch({toSelectADate:"selected_date", avaliableTime: result})
+        });}
+    }, [date] )
+
     function dateChange(e){
         const selectedDate = e.target.value
         setDate(selectedDate)
-        dispatch({type: "selected_date"})
     }
 
     const clearForm = () => {
