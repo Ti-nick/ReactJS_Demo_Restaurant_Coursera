@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import BookingPage from './BookingPage.js'
 import OnlineMenu from './OnlineMenu.js'
+import ConfirmedBooking from './ConfirmedBooking.js'
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import WrongURL from './WrongURL.js';
@@ -20,6 +21,10 @@ const router = createBrowserRouter([{
 {
   path: '/online-menu',
   element: <OnlineMenu/>,
+},
+{
+  path: '/bookingconfirm',
+  element: <ConfirmedBooking/>,
 },
 ])
 
