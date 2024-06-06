@@ -6,7 +6,7 @@ import { submitAPI } from "./mockAPI";
 import { Route, useNavigate } from "react-router-dom";
 
 export function initializeTimes() {
-    return ["17:00","18:00","19:00","20:00","21:00","22:00"];
+    return ["Select a time slot"];
 }
 
 export function updateTimes(state, action){
@@ -47,14 +47,11 @@ export default function BookingForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("You have reserve the table successfully!!See you soon!!");
+        alert("You have reserved the table successfully! See you soon!");
+        const formData = { date, time, numberGuest, occasion };
+        submitForm(formData);
         clearForm();
-
-        const formData = { date: date, time: time, numberGuest: numberGuest, occasion: occasion}
-        console.log(formData)
-        submitAPI(formData)
-
-        navigate('/bookingconfirm')
+        navigate('/bookingconfirm');
     }
 
     return (
@@ -69,7 +66,7 @@ export default function BookingForm(){
                 <input value={numberGuest} onChange={(e)=> setNumberGuest(e.target.value)} type="number" placeholder="2" min="1" max="10" id="guests" required/>
                 <label htmlFor="occasion">Occasion</label>
                 <select value={occasion} onChange={(e)=> setOccasion(e.target.value)} id="occasion" required>
-                    <option value="Ondinary Dinner">Ondinary Dinner</option>
+                    <option value="Ordinary Dinner">Ordinary Dinner</option>
                     <option value="Birthday">Birthday</option>
                     <option value="Anniversary">Anniversary</option>
                 </select>
