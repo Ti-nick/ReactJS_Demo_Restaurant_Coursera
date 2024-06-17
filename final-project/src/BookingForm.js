@@ -4,9 +4,10 @@ import { useEffect } from 'react';
 import { fetchAPI } from "./mockAPI";
 import { submitAPI } from "./mockAPI";
 import { Route, useNavigate } from "react-router-dom";
+import { useFormik } from 'formik';
 
 export function initializeTimes() {
-    return ["17:00","18:00","19:00","20:00","21:00","22:00"];
+    return ["Select a time slot"];
 }
 
 export function updateTimes(state, action){
@@ -15,6 +16,16 @@ export function updateTimes(state, action){
 }
 
 export default function BookingForm(){
+
+    // const formik = useFormik({
+    //     initialValues:{
+    //         date: "",
+    //         time: "",
+    //         numberGuest: "",
+    //         occasion: "",
+    //     }
+    // })
+
     const [state, dispatch] = useReducer(updateTimes, initializeTimes())
     const [date, setDate] = useState("")
     const [time, setTime] = useState("")
@@ -33,11 +44,6 @@ export default function BookingForm(){
         submitAPI(formData)
     }
 
-    function dateChange(e){
-        const selectedDate = e.target.value
-        setDate(selectedDate)
-    }
-
     const clearForm = () => {
         setDate("")
         setTime("")
@@ -47,20 +53,17 @@ export default function BookingForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("You have reserve the table successfully!!See you soon!!");
+        alert("You have reserved the table successfully! See you soon!");
+        const formData = { date, time, numberGuest, occasion };
+        submitForm(formData);
         clearForm();
-
-        const formData = { date: date, time: time, numberGuest: numberGuest, occasion: occasion}
-        console.log(formData)
-        submitAPI(formData)
-
-        navigate('/bookingconfirm')
+        navigate('/bookingconfirm');
     }
 
     return (
             <form onSubmit={handleSubmit} style={{margin: "100px auto", display: "grid", maxWidth: "200px", gap: "20px"}}>
                 <label htmlFor="res-date">Choose date</label>
-                <input value={date} onChange={dateChange} type="date" id="res-date" required/>
+                <input value={date} onChange={(e)=> setDate(e.target.value)} type="date" id="res-date" required/>
                 <label htmlFor="res-time">Choose time</label>
                 <select value={time} onChange={(e)=> setTime(e.target.value)} id="res-time" required>
                     {state.map(function(i){return <option key={i} value={i}>{i}</option>})}
@@ -69,7 +72,7 @@ export default function BookingForm(){
                 <input value={numberGuest} onChange={(e)=> setNumberGuest(e.target.value)} type="number" placeholder="2" min="1" max="10" id="guests" required/>
                 <label htmlFor="occasion">Occasion</label>
                 <select value={occasion} onChange={(e)=> setOccasion(e.target.value)} id="occasion" required>
-                    <option value="Ondinary Dinner">Ondinary Dinner</option>
+                    <option value="Ordinary Dinner">Ordinary Dinner</option>
                     <option value="Birthday">Birthday</option>
                     <option value="Anniversary">Anniversary</option>
                 </select>
