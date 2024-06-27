@@ -23,7 +23,8 @@ export default function BookingForm(){
     //         time: "",
     //         numberGuest: "",
     //         occasion: "",
-    //     }
+    //     },
+    //     onSubmit: value
     // })
 
     const [state, dispatch] = useReducer(updateTimes, initializeTimes())
