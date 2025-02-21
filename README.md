@@ -1,18 +1,15 @@
 # Restaurant-Demo-Coursera
 
-This is a Restaurant Reservation Website Demo that I have created while studying Frontend Developement on an online platform Coursera.
+This is a **_React.js-based_** Restaurant Reservation Demo Website that I created while studying Frontend Development on Coursera. The project involved creating user personas, designing the UX/UI in Figma, and gradually building the website step by step.
 
-This Demo Website contains the following component or features:
+This Demo Website includes the following components and features: 1. A home page for the mock restaurant “Little Lemon.” 2. A reservation page to record customer bookings.
 
-1. A home page of a mock-up restuarent "Little Lemon".
-2. A reservation page to record customers' bookings.
+Skills Learned and Applied:
 
-Skills learnt and used:
-
-1. **UX/UI** on the website layout.
-2. Using **flex-box** to arragne the elements such as navigation bar, week special cards and customers rating cards.
-3. A **form** was built for the reservation page.
-4. **Form validation** was implemented to ensure correct input.
-5. **Retreiving avaliable reservation date from a mockAPI.js** file to the reservation form.
-6. "react-router-dom" was used to **set routes** in the website.
-7. "useState", "useReducer", "useEffect" were used to **handle user interaction** to the website.
+1. **_UX/UI Design_** for website layout.
+2. Using **_Flexbox to arrange elements_** such as the navigation bar, weekly special cards, and customer rating cards.
+3. **_Building a form_** for the reservation page.
+4. Implementing **_form validation_** to ensure correct user input.
+5. **_Fetching_** available reservation dates from mockAPI.js and displaying them in the reservation form.
+6. Using **_react-router-dom_** to define website routes.
+7. Utilizing **_useState, useReducer, and useEffect_** to manage user interactions within the website.
