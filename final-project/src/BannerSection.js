@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import RestaurantFood_Square from "/Users/ty/Documents/GitHub/Restaurant-Demo-Coursera/final-project/src/assets/restauranfood_square.jpg"
+import RestaurantFood_Square from "./assets/founder_photo.jpeg"
 
 export default function BannerSection(){
     return(

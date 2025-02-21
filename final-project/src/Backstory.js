@@ -1,4 +1,4 @@
-import FounderPhoto from "/Users/ty/Documents/GitHub/Restaurant-Demo-Coursera/final-project/src/assets/founder_photo.jpeg"
+import FounderPhoto from "./assets/founder_photo.jpeg"
 
 export default function Backstory(){
     return(

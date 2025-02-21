@@ -1,4 +1,4 @@
-import Logo from "/Users/ty/Documents/GitHub/Restaurant-Demo-Coursera/final-project/src/assets/Logo.svg"
+import Logo from "./assets/Logo.svg"
 
 export default function Footer() {
     return(
